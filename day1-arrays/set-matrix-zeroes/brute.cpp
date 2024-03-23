@@ -38,13 +38,14 @@ public:
 
 int main()
 {
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    freopen("error.txt", "w", stderr);
-#endif
-
     Solution s;
     vector<vector<int>> matrix = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
     s.setZeroes(matrix);
+
+    for (int i = 0; i < matrix.size(); ++i) {
+        for (int j = 0; j < matrix[i].size(); ++j) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
