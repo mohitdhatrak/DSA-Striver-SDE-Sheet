@@ -9,6 +9,7 @@ public:
         r = ((n - r) < r) ? n - r : r;
 
         long long ans = 1;
+
         for (int i = 1; i <= r; ++i) {
             ans = ans * n;
             ans = ans / i;
@@ -16,6 +17,19 @@ public:
         }
 
         return ans;
+
+        // OR
+
+        // long long num = 1;
+        // long long deno = 1;
+
+        // for (int i = 1; i <= r; ++i) {
+        //     num = num * n;
+        //     deno = deno * i;
+        //     n--;
+        // }
+
+        // return (num / deno);
     }
 
     vector<int> generateSingleRow(int rowNum) {
